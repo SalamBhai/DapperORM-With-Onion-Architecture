@@ -8,7 +8,9 @@ namespace IOC.Extensions
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration Configuration)
         {
               services.AddDbContext()
-                .AddConnections();
+                .AddConnections()
+                .AddServices()
+                .AddRepositories();
             return services;
         }
     }

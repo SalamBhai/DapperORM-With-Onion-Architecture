@@ -1,9 +1,13 @@
-﻿using Domain.Interfaces;
+﻿using Application.Implementations.Services;
+using Application.Interfaces.Repositories;
+using Application.Interfaces.Services;
+using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Connections;
 using Persistence.Context;
+using Persistence.Implementations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +34,18 @@ namespace IOC.Extensions
         {
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(connectionString));
+            return services;
+        }
+        public static IServiceCollection AddRepositories(this IServiceCollection services)
+        {
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+            return services;
+        }
+        public static IServiceCollection AddServices(this IServiceCollection services)
+        {
+            services.AddScoped<IDepartmentService, DepartmentService>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
             return services;
         }
     }

@@ -32,5 +32,6 @@ public class ApplicationReadDbConnection : IApplicationReadDbConnection, IDispos
     public async Task<T> QuerySingleAsync<T>(string sql, object? param = null, IDbTransaction? transaction = null, CancellationToken cancellationToken = default)
     {
         return await _connection.QuerySingleAsync<T>(sql, param, transaction);
+        
     }
 }

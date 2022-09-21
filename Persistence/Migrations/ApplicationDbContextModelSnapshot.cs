@@ -33,7 +33,7 @@ namespace Persistence.Migrations
                     b.Property<int>("CreatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime?>("CreatedOn")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("DeletedBy")
@@ -49,7 +49,7 @@ namespace Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("LastModifiedBy")
+                    b.Property<int?>("LastModifiedBy")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("LastModifiedOn")
@@ -68,22 +68,22 @@ namespace Persistence.Migrations
                         {
                             Id = 1,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 9, 14, 14, 35, 50, 577, DateTimeKind.Utc).AddTicks(7099),
+                            CreatedOn = new DateTime(2022, 9, 15, 10, 42, 24, 934, DateTimeKind.Utc).AddTicks(3359),
+                            DeletedOn = new DateTime(2022, 9, 15, 10, 42, 24, 934, DateTimeKind.Utc).AddTicks(3339),
                             Description = "For Legal Activities",
                             IsDeleted = false,
-                            LastModifiedBy = 0,
-                            LastModifiedOn = new DateTime(2022, 9, 14, 14, 35, 50, 577, DateTimeKind.Utc).AddTicks(7078),
+                            LastModifiedOn = new DateTime(2022, 9, 15, 10, 42, 24, 934, DateTimeKind.Utc).AddTicks(3320),
                             Name = "Legal Department"
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 9, 14, 14, 35, 50, 577, DateTimeKind.Utc).AddTicks(7142),
+                            CreatedOn = new DateTime(2022, 9, 15, 10, 42, 24, 934, DateTimeKind.Utc).AddTicks(3422),
+                            DeletedOn = new DateTime(2022, 9, 15, 10, 42, 24, 934, DateTimeKind.Utc).AddTicks(3407),
                             Description = "For Sanitation",
                             IsDeleted = false,
-                            LastModifiedBy = 0,
-                            LastModifiedOn = new DateTime(2022, 9, 14, 14, 35, 50, 577, DateTimeKind.Utc).AddTicks(7126),
+                            LastModifiedOn = new DateTime(2022, 9, 15, 10, 42, 24, 934, DateTimeKind.Utc).AddTicks(3392),
                             Name = "Toilet Department"
                         });
                 });
@@ -99,7 +99,7 @@ namespace Persistence.Migrations
                     b.Property<int>("CreatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime?>("CreatedOn")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("DeletedBy")
@@ -118,7 +118,7 @@ namespace Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("LastModifiedBy")
+                    b.Property<int?>("LastModifiedBy")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("LastModifiedOn")
@@ -139,24 +139,24 @@ namespace Persistence.Migrations
                         {
                             Id = 1,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 9, 14, 14, 35, 50, 577, DateTimeKind.Utc).AddTicks(7188),
+                            CreatedOn = new DateTime(2022, 9, 15, 10, 42, 24, 934, DateTimeKind.Utc).AddTicks(3796),
+                            DeletedOn = new DateTime(2022, 9, 15, 10, 42, 24, 934, DateTimeKind.Utc).AddTicks(3780),
                             DepartmentId = 1,
                             Email = "Employee1@gmail.com",
                             IsDeleted = false,
-                            LastModifiedBy = 0,
-                            LastModifiedOn = new DateTime(2022, 9, 14, 14, 35, 50, 577, DateTimeKind.Utc).AddTicks(7173),
+                            LastModifiedOn = new DateTime(2022, 9, 15, 10, 42, 24, 934, DateTimeKind.Utc).AddTicks(3761),
                             Name = "Ganiyu Ganiyu"
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = 1,
-                            CreatedOn = new DateTime(2022, 9, 14, 14, 35, 50, 577, DateTimeKind.Utc).AddTicks(7240),
+                            CreatedOn = new DateTime(2022, 9, 15, 10, 42, 24, 934, DateTimeKind.Utc).AddTicks(3860),
+                            DeletedOn = new DateTime(2022, 9, 15, 10, 42, 24, 934, DateTimeKind.Utc).AddTicks(3844),
                             DepartmentId = 2,
                             Email = "Employee2@gmail.com",
                             IsDeleted = false,
-                            LastModifiedBy = 0,
-                            LastModifiedOn = new DateTime(2022, 9, 14, 14, 35, 50, 577, DateTimeKind.Utc).AddTicks(7219),
+                            LastModifiedOn = new DateTime(2022, 9, 15, 10, 42, 24, 934, DateTimeKind.Utc).AddTicks(3830),
                             Name = "Abass Adebayo "
                         });
                 });
